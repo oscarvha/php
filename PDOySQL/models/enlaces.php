@@ -31,6 +31,10 @@ class Paginas{
 
 			$module =  "views/modules/usuarios.php";
 		
+		}else if($enlaces == "cambio"){
+
+			$module =  "views/modules/usuarios.php";
+		
 		}
 
 		else{
