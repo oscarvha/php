@@ -1,0 +1,27 @@
+Jerarquia de Carpetas
+
+WEB:
+Hacia donde tiene que apuntar el servidor, parte pública de la aplicación.
+
+VENDOR:
+Se crea cuando se utiliza composer, se descargan todas las dependencias y plug-ing. Todo sympony funciona de manera modular.
+
+SRC:
+Donde van a ir nuestros Plug-ins
+
+BIN:
+Ejecutable para linea de comando.
+
+APP:
+Contiene por un lado "Console" para ejecutar comandos como limpiar cache de la aplicacion
+Archivos de configuracion.
+Cache.
+Logs. 
+
+
+COMPOSER:
+composer.json: todas las dependencias del proyecto. Si en un futuro se quieren agregar un futuro librerias hay que hacerlos aqui.
+
+
+
+secret (ThisTokenIsNotSoSecretChangeIt): En la instalacion clave para la encriptación de las cookies etc.
