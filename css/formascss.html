@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<style type="text/css">
+
+.circle-text {
+    width:100%;
+    font-size: 3.5rem;
+    transition: background-color 0.5s ease;
+}
+.circle-text:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height:0;
+    padding-bottom: 100%;
+    background: #4679BD; 
+    -moz-border-radius: 50%; 
+    -webkit-border-radius: 50%; 
+    border-radius: 50%;
+}
+
+.circle-text div {
+    float:left;
+    width:100%;
+    padding-top:50%;
+    line-height:1em;
+    margin-top:-0.5em;
+    text-align:center;
+    color:white;
+}
+
+.rectangle-box{
+      position: relative;
+    width: 200%;
+    overflow: hidden;
+    background: #4679BD;
+    margin-top: 100%;
+    margin-left: -50%;
+}
+.rectangle-box:before{
+    content: "";
+    display: block;
+    padding-top: 20%;
+}
+.visited{
+	 
+}
+.visited:after{
+	background-color: red;
+}
+
+
+</style>
+	<title>Prueba forams</title>
+</head>
+<body>
+<h1>Carro de compra</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis asperiores dolor, iste veritatis ea aut nostrum ipsam recusandae at explicabo, eaque porro id dolore sequi!</p>
+<div class="container">
+<div class="row hidden-xs-down">
+<div class="col-sm-2">
+ <div id="circle-1" class="circle-text"><div>1</div></div>
+ </div>
+
+ <div class="col-sm-2 offset-sm-1">
+ <div id="circle-2" class="circle-text"><div>2</div></div>
+ </div>
+
+  <div class="col-sm-2 offset-sm-1">
+ <div  id="circle-3" class="circle-text"><div>3</div></div>
+ </div>
+
+   <div class="col-sm-2 offset-sm-1">
+ <div id="circle-4" class="circle-text"><div>4</div></div>
+ </div>
+
+ </div>
+ </div>
+ <button onclick="changecolor()">Cambiar</button>
+
+<script type="text/javascript">
+	function changecolor() {
+		alert("Hola");
+		var circle = document.getElementById("circle-1");
+		circle.className+=" visited";
+		// body...
+	}
+</script>
+</body>
+</html>
