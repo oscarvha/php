@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+</head>
+<body>
+<p class="click-ref"><a href="iframefull.html">Open Iframe</a></p>
+<a href="www.marca.com">Otro</a>
+
+<script type="text/javascript">
+	$( document ).ready(function() {
+    console.log( "ready!" );
+    $( ".click-ref" ).children('a').attr( "target", "_blank" );
+
+    $( ".click-ref" ).children('a').click(function(event){
+    	event.preventDefault();
+    	console.log("function");
+    })
+});
+</script>
+</body>
+</html>
