@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css"/>
+  <link rel="stylesheet" type="text/css" href="jquery-ui/jquery-ui.min.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script
+          src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
+          integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="
+          crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="slick/slick.min.js"></script>
+  <script type="text/javascript" src="jquery-ui/jquery-ui.min.js"></script>
+ <!-- Latest compiled and minified CSS -->
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- Latest compiled JavaScript -->
+
+ <style>
+   .slider {
+     /*width: 400px;*/
+     /*background: black;*/
+   }
+   .slider .ui-slider-handle {
+     /*display: block;*/
+     /*width: 40px;*/
+     /*height: 20px;*/
+     /*margin-left: -20px;*/
+     /*background: red;*/
+     /*cursor: pointer;*/
+     /*position: relative;*/
+   }
+   .carousel {
+
+   }
+   .carousel .slick-slide {
+     height: auto;
+   }
+ </style>
+	<title></title>
+</head>
+<body>
+<div class="container-fluid">
+  <div class="carousel">
+    <img src="http://lorempixel.com/400/300/city/1" alt="" />
+    <img src="http://lorempixel.com/400/300/city/2" alt="" />
+    <img src="http://lorempixel.com/400/300/city/3" alt="" />
+    <img src="http://lorempixel.com/400/300/city/4" alt="" />
+    <img src="http://lorempixel.com/400/300/city/5" alt="" />
+    <img src="http://lorempixel.com/400/300/city/6" alt="" />
+  </div>
+  <div class="slider"></div>
+</div>
+
+
+
+<script>
+
+    $(function() {
+        var $carousel = $(".carousel");
+        var slider;
+
+        $carousel.slick({
+            speed : 300,
+            arrows: false,
+            slidesToShow: 3
+        });
+
+        slider = $( ".slider" ).slider({
+            min : 0,
+            max : 5,
+            slide: function(event, ui) {
+                var slick = $carousel.slick( "getSlick" );
+                goTo = ui.value * (slick.slideCount-1) / 5;
+                console.log( goTo );
+                $carousel.slick( "goTo", goTo );
+            }
+        });
+    });
+
+
+</script>
+</body>
+
+</html>
